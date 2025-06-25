@@ -1,0 +1,21 @@
+﻿<div id="recipesContainer"></div>
+
+@section Scripts {
+    <script>
+        async function loadRecipes() {
+            const token = '@Context.Session.GetString("JWTToken")';
+            const res = await fetch("https://localhost:7176/api/recipes", {
+                headers: {
+                    "Authorization": "Bearer " + token
+                }
+            });
+            const data = await res.json();
+
+            const container = document.getElementById("recipesContainer");
+            data.forEach(r => {
+                container.innerHTML += `<div><h4>${r.title}</h4><p>${r.description}</p></div>`;
+            });
+        }
+        loadRecipes();
+    </script>
+}

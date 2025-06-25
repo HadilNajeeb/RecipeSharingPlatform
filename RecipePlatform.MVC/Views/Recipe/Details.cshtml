@@ -1,0 +1,23 @@
+﻿@model RecipePlatform.Models.Entities.Recipe
+
+<h2>@Model.Title</h2>
+
+<div class="mb-4">
+    <strong>Category:</strong> @Model.Category?.Name <br />
+    <strong>Difficulty:</strong> @Model.Difficulty <br />
+    <strong>Servings:</strong> @Model.Servings <br />
+    <strong>Prep Time:</strong> @Model.PrepTimeMinutes minutes <br />
+    <strong>Cook Time:</strong> @Model.CookTimeMinutes minutes <br />
+    <strong>Created by:</strong> @Model.ApplicationUser?.UserName <br />
+</div>
+
+<h4>Description</h4>
+<p>@Model.Description</p>
+
+<h4>Ingredients</h4>
+<p>@Model.Ingredients</p>
+
+<h4>Instructions</h4>
+<p>@Model.Instructions</p>
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Back to List</a>

@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Welcome to Recipe Platform";
+}
+
+<div class="hero-section text-white text-center py-5" style="background: url('https://images.unsplash.com/photo-1512058564366-c9e3f77e3ab6?auto=format&fit=crop&w=1350&q=80') no-repeat center center; background-size: cover;">
+    <h1 class="display-4 fw-bold">Discover Delicious Recipes</h1>
+    <p class="lead">Your next meal inspiration is just a click away.</p>
+    <a class="btn btn-light btn-lg mt-3" href="/Recipe/Index">Browse Recipes</a>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Popular Recipes</h2>
+    <div class="row">
+        @* Example Cards *@
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow">
+                <img src="https://source.unsplash.com/400x300/?pasta" class="card-img-top" alt="Pasta">
+                <div class="card-body">
+                    <h5 class="card-title">Spaghetti Bolognese</h5>
+                    <p class="card-text">Classic Italian dish with rich meat sauce.</p>
+                    <a href="/Recipe/Details/1" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow">
+                <img src="https://source.unsplash.com/400x300/?cake" class="card-img-top" alt="Cake">
+                <div class="card-body">
+                    <h5 class="card-title">Chocolate Cake</h5>
+                    <p class="card-text">Rich and moist chocolate dessert.</p>
+                    <a href="/Recipe/Details/2" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow">
+                <img src="https://source.unsplash.com/400x300/?salad" class="card-img-top" alt="Salad">
+                <div class="card-body">
+                    <h5 class="card-title">Healthy Salad</h5>
+                    <p class="card-text">Fresh vegetables with vinaigrette dressing.</p>
+                    <a href="/Recipe/Details/3" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2025 Recipe Sharing Platform</p>
+</footer>
